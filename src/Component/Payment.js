@@ -20,7 +20,7 @@ const initPayment = (data) => {
     order_id : data.id,
     handler : async (response) => {
       try {
-        const verifyUrl = 'http://localhost:3001/verify';
+        const verifyUrl = 'https://razorpaybackend-sshk.onrender.com/verify';
         const {data} = await axios.post(verifyUrl, response);
         console.log("verifyData",data);
       } catch (error) {
@@ -37,7 +37,7 @@ const initPayment = (data) => {
 
   const handlePayment = async () => {
     try {
-      const orderUrl = 'http://localhost:3001/orders';
+      const orderUrl = 'https://razorpaybackend-sshk.onrender.com/orders';
       const {data} = await axios.post(orderUrl, {
         amount: book.price
       });
