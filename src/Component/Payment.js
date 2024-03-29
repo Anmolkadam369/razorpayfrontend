@@ -11,7 +11,7 @@ function Payment() {
 
 const initPayment = (data) => {
   const options = {
-    key: '---------------',
+    key: "rzp_test_UH0rkDW0Rkm44R",
     amount : data.amount,
     currency : data.currency,
     name : book.name,
